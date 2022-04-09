@@ -28,12 +28,12 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #202322;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #202322;
   text-shadow: none;
 }
 
@@ -115,6 +115,8 @@ textarea {
    ul,
    ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
    }
 
    a {
@@ -140,6 +142,7 @@ textarea {
    p {
    font-size: .875em;
    line-height: 1.285em;
+   letter-spacing: .01em;
    }
 
    img {
@@ -156,7 +159,7 @@ textarea {
 
    .content-wrapper {
      width: 90%;
-     margin: 50px 0;
+     margin: 20px 0;
    }
 
 /* ---------------------- Base Header - Footer Styles --------------*/
@@ -197,20 +200,21 @@ header figure {
 }
 
 header nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row wrap;
   width: 60%;
   font-size: 1.125em;
   font-weight: 700;
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
+
 }
 
 header nav ul li {
@@ -242,9 +246,17 @@ footer .social-icons {
 }
 
 footer .social-icons p {
+  background-color: #527158;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .social-icons p i {
+  font-size: 1.3125em;
 }
 
 footer .copyright {
@@ -294,7 +306,7 @@ input[type=text] {
 
 input[type=button] {
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
   margin-top: 20px;
   background-color: #2a423a;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -521,7 +533,7 @@ input[type=button] {
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
-   ========================================================================== */
+   ==========================================================================*/
 
 @media only screen and (min-width: 768px) {
   /* Tablet styles here */
@@ -659,6 +671,12 @@ footer p {
 footer .copyright {
   width: 100%;
 }
+
+footer .social-icons {
+  width: 12.5em;
+  justify-content: space-between;
+}
+
 /* ==========================================================================
  About Page
  ========================================================================== */
@@ -806,7 +824,8 @@ footer .copyright {
       .faq h4,
       .faq p {
         font-size: 1.125em;
-        line-height: 1;
+        line-height: 1.125;
+        letter-spacing: .02em;
       }
 
 }
